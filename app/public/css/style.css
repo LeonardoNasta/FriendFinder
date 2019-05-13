@@ -1,0 +1,14 @@
+body {
+    background-color: white
+}
+
+.headerCSS,.footerCSS {
+    background-color: black;
+    padding-bottom: 25px;
+    padding-top:10px
+}
+
+.footerCSS {
+    margin-top: 20px
+}
+

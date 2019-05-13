@@ -1,0 +1,247 @@
+ <!-- Compiled and minified CSS -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Friend Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" class="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <row>
+      <header class="headerCSS">
+        <div class="center">
+          <h1 class="white-text">
+            Friend Finder!
+          </h1>
+        </div>
+      </header>
+    </row>
+
+    <br>
+    <br>
+
+    <row>
+      <div class="input-field center-align col s6">
+        <h5>Name (Required)</h5>
+        <i class="material-icons prefix">account_circle</i>
+        <input type="text" class="validate" placeholder="Your Name Here"
+          id="friendName">
+      </div>
+
+      <div class="input-field center-align col s6">
+        <h5>Link a photo of yourself (Required)</h5>
+        <i class="material-icons prefix">picture_in_picture</i>
+        <input type="text" class="validate" placeholder="Photo link Here"
+          id="friendPhoto">
+      </div>
+    </row>
+
+    <div class="container">
+      <row>
+        <div class="center-align">
+
+          <div class="input-field col s12">
+            <h3><strong>Question 1</strong></h3>
+            <h4>boats are the just the best!</h4>
+            <select id="q1">
+              <option placeholder="Select an Option" value=""></option>
+              <option value="1">1 (Not at all!)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (For sure!)
+              </optio>
+            </select>
+          </div>
+
+          <div class="input-field col s12">
+            <h3><strong>Question 2</strong></h3>
+            <h4>toads or frogs?</h4>
+            <select id="q2">
+              <option placeholder="Select an Option" value=""></option>
+              <option value="1">1 (toad)</option>
+              <option value="2">2</option>
+              <option value="3">3 (Why would you do this?)</option>
+              <option value="4">4</option>
+              <option value="5">5 (frog)</option>
+            </select>
+          </div>
+
+          <div class="input-field col s12">
+            <h3><strong>Question 3</strong></h3>
+            <h4>Modern art?</h4>
+            <select id="q3">
+              <option placeholder="Select an Option" value=""></option>
+              <option value="1">1 (its just shapes!)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (fascinating...)</option>
+            </select>
+
+            <div class="input-field col s12">
+              <h3><strong>Question 4</strong></h3>
+              <h4>Are you staying hydrated?</h4>
+              <select id="q4">
+                <option placeholder="Select an Option" value=""></option>
+                <option value="1">1 (i'm done with water!)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Canteen Hero.)</option>
+              </select>
+
+              <div class="input-field col s12">
+                <h3><strong>Question 5</strong></h3>
+                <h4>You pick the place for lunch.</h4>
+                <select id="q5">
+                  <option placeholder="Select an Option" value=""></option>
+                  <option value="1">1 (im fine with whatever.)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (There's this good spot...)</option>
+                </select>
+              </div>
+
+
+              <div class="input-field col s12">
+                <h3><strong>Question 6</strong></h3>
+                <h4> You crave adventure!</h4>
+                <select id="q6">
+                  <option placeholder="Select an Option" value=""></option>
+                  <option value="1">1 (wait like in real life?)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Hey you wanna go bungie jumping!?)</option>
+                </select>
+              </div>
+
+
+              <div class="input-field col s12">
+                <h3><strong>Question 7</strong></h3>
+                <h4> You always have a plan!</h4>
+                <select id="q7">
+                  <option placeholder="Select an Option" value=""></option>
+                  <option value="1">1 (I just go with the flow.)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (I'm always ready.)</option>
+                </select>
+              </div>
+
+              <div class="input-field col s12">
+                <h3><strong>Question 8</strong></h3>
+                <h4> You wear socks around the house.</h4>
+                <select id="q8">
+                  <option placeholder="Select an Option" value=""></option>
+                  <option value="1">1 (Free my feet!)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (So warm!)</option>
+                </select>
+              </div>
+
+              <div class="black-text input-field col s12">
+                <h3><strong>Question 9</strong></h3>
+                <h4> Travis Scott starts playing.</h4>
+                <select id="q9">
+                  <option placeholder="Select an Option" value=""></option>
+                  <option value="1">1 (Again?)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (IT'S LIT!)</option>
+                </select>
+              </div>
+
+              <div class="input-field col s12">
+                <h3><strong>Question 10</strong></h3>
+                <h4> You like personality quizzes.</h4>
+                <select id="q10">
+                  <option placeholder="Select an Option" value=""></option>
+                  <option value="1">1 (I'm bored.)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (so fascinating!)</option>
+                </select>
+              </div>
+            </div>
+          </row>
+        </div>
+      </div>
+
+      <row>
+        <div class="col s12 center-align">
+          <button class="black btn waves-effect waves-light" id="submitBtn"
+            type="submit"
+            name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </row>
+      <footer class="footerCSS page-footer black">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 center-align">
+              <h5 class="white-text">Links</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-1" href="/api/friends">
+                    Friends List API</a></li>
+                <li><a class="grey-text text-lighten-1"
+                    href="https://github.com/leonardonasta/friendFinder">GitHub
+                    Repository</a></li>
+              </ul>
+            </div>
+          </div>
+
+
+        </footer>
+
+        <!-- Compiled and minified JavaScript -->
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+          $(document).ready(function(){
+            M.AutoInit();
+
+            $('#submitBtn').on('click', function(event) {
+			event.preventDefault();
+
+			var friendResults = {
+				name: $('#friendName').val().trim(),
+				photo: $('#friendPhoto').val().trim(),
+				scores:[
+					$('#q1').val().trim(),
+					$('#q2').val().trim(),
+					$('#q3').val().trim(),
+					$('#q4').val().trim(),
+					$('#q5').val().trim(),
+					$('#q6').val().trim(),
+					$('#q7').val().trim(),
+					$('#q8').val().trim(),
+					$('#q9').val().trim(),
+					$('#q10').val().trim()
+        ]}
+        
+        $.post("../data/friends.js", friendResults).done(function(data) {
+        });
+            }); 
+          });
+            </script>
+      </body>
+    </html>
