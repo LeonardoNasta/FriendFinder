@@ -1,22 +1,15 @@
 var express = require("express");
 
-//var bodyParser = require("body-parser");
-var path = require("path");
 var app = express();
+
 var PORT = process.env.PORT || 8080;
 
-//initialize middleware.
-app.use(express.json());
-//body parser is now built in to express.
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-// Static directory
-app.use(express.static('app/public'));
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
-// import application routes
-require("./app/routing/apiRoutes");
-require("./app/routing/htmlRoutes");
-
-// Start our server.
 app.listen(PORT, function() {
-  console.log("Friend Finder listening on: http://localhost:" + PORT);
+  console.log("App listening on PORT: " + PORT);
+});

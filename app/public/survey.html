@@ -215,33 +215,53 @@
         <!-- Compiled and minified JavaScript -->
         <script
           src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script>
-          $(document).ready(function(){
-            M.AutoInit();
+       
 
-            $('#submitBtn').on('click', function(event) {
-			event.preventDefault();
-
-			var friendResults = {
-				name: $('#friendName').val().trim(),
-				photo: $('#friendPhoto').val().trim(),
-				scores:[
-					$('#q1').val().trim(),
-					$('#q2').val().trim(),
-					$('#q3').val().trim(),
-					$('#q4').val().trim(),
-					$('#q5').val().trim(),
-					$('#q6').val().trim(),
-					$('#q7').val().trim(),
-					$('#q8').val().trim(),
-					$('#q9').val().trim(),
-					$('#q10').val().trim()
-        ]}
-        
-        $.post("../data/friends.js", friendResults).done(function(data) {
-        });
-            }); 
-          });
-            </script>
-      </body>
-    </html>
+<script type="text/javascript">
+	$("#submitBtn").on("click", function(event) {
+		event.preventDefault();
+		// Form validation
+		var validated = true;
+		if($("#friendName").val() === "" || $("#friendPhoto").val() === "") {
+			validated = false;
+    } else if($("#q1").val() === "empty" ||
+      $("#q2").val() === "empty" ||
+      $("#q3").val() === "empty" ||
+      $("#q4").val() === "empty" ||
+      $("#q5").val() === "empty" || 
+      $("#q6").val() === "empty" ||
+      $("#q7").val() === "empty" || 
+      $("#q8").val() === "empty" ||
+      $("#q9").val() === "empty" ||
+      $("#q10").val() === "empty") {
+      validated = false;
+      
+		}
+		if(validated === true) {
+			var newUser = {
+				name: $("#friendName").val().trim(),
+				photo: $("#friendPhoto").val().trim(),
+				scores: [
+					$("#q1").val(),
+					$("#q2").val(),
+					$("#q3").val(),
+					$("#q4").val(),
+					$("#q5").val(),
+					$("#q6").val(),
+					$("#q7").val(),
+					$("#q8").val(),
+					$("#q9").val(),
+					$("#q10").val()
+				]
+			};
+			var currentURL = window.location.origin;
+			$.post(currentURL + "/api/friends", newUser, function(data) {
+				$("#newBestFriend").text(data.name);
+				$("#newBestFriendPhoto").attr("src", data.photo);
+				$("#newBestFriendModal").modal("toggle");
+			});
+		} else {
+			alert("you missed a question!");
+		}
+	});
+</script>
