@@ -238,7 +238,7 @@
       
 		}
 		if(validated === true) {
-			var newUser = {
+			var newFriend = {
 				name: $("#friendName").val().trim(),
 				photo: $("#friendPhoto").val().trim(),
 				scores: [
@@ -255,12 +255,13 @@
 				]
 			};
 			var currentURL = window.location.origin;
-			$.post(currentURL + "/api/friends", newUser, function(data) {
+			$.post(currentURL + "/api/friends", newFriend, function(data) {
 				$("#newBestFriend").text(data.name);
 				$("#newBestFriendPhoto").attr("src", data.photo);
 				$("#newBestFriendModal").modal("toggle");
 			});
 		} else {
+
 			alert("you missed a question!");
 		}
 	});
